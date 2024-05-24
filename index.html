@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Sensor</title>
+    <style>
+        body {
+            background-color: darkblue;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 0 0 0;
+        }
+
+        #bg {
+            background-color: white;
+            height: 250px;
+            width: 280px;
+            border-radius: 15px;
+            margin: auto;
+        }
+
+        #bg button {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            height: 25px;
+        }
+
+        #big-div input {
+            margin-top: 30px;
+        }
+
+        #bg input {
+            height: 20px;
+            width: 150px;
+        }
+
+        #word {
+            color: white;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="word">Word Sensor</div>
+        <div id="bg">
+            <div id="big-div">
+                <input type="text" placeholder="input note here" id="input">
+                <button id="btn" onclick="button()">Click Me</button>
+                <p id="paragraph"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let input1 = document.getElementById('input')
+    let result = document.getElementById('paragraph')
+
+    function button() {
+        let answer = (input1.value)
+        finalResult = answer.replaceAll('fuck', 'f**k').replaceAll('shit', '****').replaceAll('stupid', '******').replaceAll('foolish', '*******').replaceAll('crazy', 'cr*zy')
+        result.textContent = finalResult 
+    }
+
+
+</script>
